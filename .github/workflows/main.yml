@@ -1,12 +1,14 @@
 name: Run YouTube Bot
+
 on:
-  schedule:
-    - cron: '0 */6 * * *'
   workflow_dispatch:
+  schedule:
+    - cron: '0 * * * *'
 
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -14,19 +16,14 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.9'
+          python-version: '3.10'
 
       - name: Install dependencies
-        run: - name: Install dependencies
         run: |
-         pip install --upgrade pip
-          pip install setuptools wheel
+          python -m pip install --upgrade pip
+          pip install wheel setuptools
           pip install -r requirements.txt
           python -m spacy download en_core_web_sm
 
       - name: Run bot
-        env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
-          CLIENT_SECRETS_JSON: ${{ secrets.CLIENT_SECRETS_JSON }}
         run: python main.py
