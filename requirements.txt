@@ -2,11 +2,9 @@ wheel
 termcolor
 schedule
 requests
-kittentts @ https://github.com/KittenML/KittenTTS/releases/download/0.8.1/kittentts-0.8.1-py3-none-any.whl
 soundfile
 prettytable
-webdriver_manager
-selenium_firefox
+webdriver-manager
 selenium
 ollama
 moviepy
@@ -15,6 +13,6 @@ yagmail
 assemblyai
 faster-whisper
 srt_equalizer
-undetected_chromedriver
+undetected-chromedriver
 platformdirs
-spacy>=3.7.[span_5](start_span)2
+spacy>=3.7.2
