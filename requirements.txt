@@ -15,4 +15,5 @@ faster-whisper
 srt_equalizer
 undetected-chromedriver
 platformdirs
-spacy>=3.7.2
+spacy
+en_core_web_sm
