@@ -10,3 +10,5 @@ gTTS
 opencv-python
 pillow
 schedule
+termcolor
+art
