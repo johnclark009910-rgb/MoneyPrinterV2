@@ -9,3 +9,4 @@ moviepy
 gTTS
 opencv-python
 pillow
+schedule
