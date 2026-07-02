@@ -16,3 +16,4 @@ soundfile
 numpy
 pandas
 decorator
+kittentts
