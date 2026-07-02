@@ -20,4 +20,6 @@ jobs:
       - name: Create config
         run: echo '${{ secrets.CONFIG_JSON }}' > config.json
       - name: Run bot
+        env:
+          PYTHONPATH: ${{ github.workspace }}/src
         run: python src/main.py
