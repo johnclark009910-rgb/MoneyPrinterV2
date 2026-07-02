@@ -12,3 +12,7 @@ pillow
 schedule
 termcolor
 art
+soundfile
+numpy
+pandas
+decorator
