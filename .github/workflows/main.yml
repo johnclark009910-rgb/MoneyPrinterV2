@@ -18,8 +18,7 @@ jobs:
           pip install -r requirements.txt
           python -m spacy download en_core_web_sm
       - name: Create config
-        run: echo '${{ secrets.CONFIG_JSON }}' > config.json
+        run: echo '${{ secrets.CONFIG_JSON }}' > src/config.json
       - name: Run bot
-        env:
-          PYTHONPATH: ${{ github.workspace }}/src
-        run: python src/main.py
+        working-directory: ./src
+        run: python main.py
