@@ -18,3 +18,4 @@ pandas
 decorator
 kittentts
 ollama
+selenium
